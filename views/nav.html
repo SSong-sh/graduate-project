@@ -1,0 +1,41 @@
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="#" class="navbar-logo">졸업작품</a>
+    </div>
+    <ul class="navbar-menu">
+      <div class="navbar_list">
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">RESERCH</a></li>
+        <li><a href="#">STORY</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </div>
+    </ul>
+    <div class="navbar-right">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      var navbar = document.querySelector(".navbar");
+
+      if (window.scrollY > 0) {
+        navbar.classList.add("navbar-scroll");
+      } else {
+        navbar.classList.remove("navbar-scroll");
+      }
+    });
+  </script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    src="https://kit.fontawesome.com/6478f529f2.js"
+    crossorigin="anonymous"
+  ></script>
+</body>

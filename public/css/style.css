@@ -256,66 +256,53 @@ body {
   font-size: 20px;
 }
 
-/* card */
-.container {
-  width: 1160px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-.section {
-  padding: 120px 0;
-}
-.section > h2 {
-  font-size: 50px;
-  line-height: 1;
-  margin-bottom: 20px;
-  text-align: center;
-  font-weight: 400;
-}
-.section > p {
-  font-size: 22px;
-  font-weight: 300;
-  margin-bottom: 70px;
-  color: #666;
-  text-align: center;
-  line-height: 1.5;
+/* cardType */
+
+.box-container {
+  display: flex;
+
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  align-items: center;
+  height: 200px; /* 원하는 높이로 조정해주세요 */
+  position: relative;
+  top: 500px;
+  margin-right: 150px;
+  z-index: 1; /* 박스가 위에 오도록 설정합니다 */
 }
 
-/* cardType */
-.card__wrap {
-}
-.card__inner {
+.box {
+  width: 230px; /* 원하는 너비로 조정해주세요 */
+  height: 250px; /* 원하는 높이로 조정해주세요 */
+  margin-right: 10px;
+  margin-top: 150px;
+  background-color: rgba(
+    63,
+    56,
+    56,
+    0.5
+  ); /* 배경색은 원하는 대로 수정해주세요 */
+  position: relative;
+  z-index: 2; /* 박스가 위에 오도록 설정합니다 */
+  border-radius: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  z-index: 1;
 }
-.card {
-  width: 32%;
-  background: #f5f5f5;
+
+.box p {
+  color: white;
+  margin: 20px;
+  font-size: 20px;
+  align-self: flex-start;
 }
-.card_header {
+.box .nav-button.small {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
-.card_body {
-  padding: 24px 24px;
-}
-.card_body .tit {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.card_body .desc {
-  font-size: 18px;
-  line-height: 1.4;
-  color: #666;
-  margin-bottom: 20px;
-  font-weight: 300;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  margin-bottom: 10px;
-}
-.card_body .btn {
-  font-size: 16px;
-  color: #222;
+
+.new-box {
+  background-color: #d2d2d2;
+  width: 400px;
+  border-radius: 0 20px 0px 20px;
 }

@@ -73,32 +73,43 @@
         <div class="content-inner"></div>
       </div>
     </div>
-
     <script>
       $(document).ready(function () {
+        // 첫 번째 상자의 텍스트와 버튼을 검정색으로 시작
+        $(".box:first-child p").css("color", "black");
+        $(".box:first-child .nav-button.small").css({
+          color: "black",
+          border: "1px solid black",
+        });
+
         $(".box").click(function (e) {
           var clickedBox = $(this);
 
-          if (clickedBox.hasClass("new-box")) {
-            // .new-box 클래스가 이미 적용된 경우
-            clickedBox.removeClass("new-box");
-          } else {
-            // .new-box 클래스가 적용되지 않은 경우
-            $(".box").removeClass("new-box"); // 다른 .box 요소에서 .new-box 클래스 제거
+          if (!clickedBox.hasClass("new-box")) {
+            // 다른 상자를 클릭했을 때
+            $(".box").removeClass("new-box");
             clickedBox.addClass("new-box");
-          }
-
-          // .new-box 클래스의 CSS 속성 변경
-          $(".box").each(function () {
-            var box = $(this);
-            var isBoxNew = box.hasClass("new-box");
-
-            box.find("p").css("color", isBoxNew ? "black" : "white");
-            box.find(".nav-button.small").css({
-              color: isBoxNew ? "black" : "white",
-              border: isBoxNew ? "1px solid black" : "1px solid white",
+            clickedBox.find("p").css("color", "black");
+            clickedBox.find(".nav-button.small").css({
+              color: "black",
+              border: "1px solid black",
             });
-          });
+
+            // 이 부분을 추가하여 다른 상자의 텍스트와 버튼을 흰색으로 변경
+            $(".box").not(clickedBox).find("p").css("color", "white");
+            $(".box").not(clickedBox).find(".nav-button.small").css({
+              color: "white",
+              border: "1px solid white",
+            });
+          } else {
+            // 같은 상자를 클릭했을 때
+            clickedBox.removeClass("new-box");
+            clickedBox.find("p").css("color", "white");
+            clickedBox.find(".nav-button.small").css({
+              color: "white",
+              border: "1px solid white",
+            });
+          }
         });
       });
     </script>

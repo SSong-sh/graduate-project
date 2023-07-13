@@ -275,12 +275,7 @@ body {
   height: 250px; /* 원하는 높이로 조정해주세요 */
   margin-right: 10px;
   margin-top: 150px;
-  background-color: rgba(
-    63,
-    56,
-    56,
-    0.5
-  ); /* 배경색은 원하는 대로 수정해주세요 */
+  background-color: rgba(63, 56, 56, 0.5);
   position: relative;
   z-index: 2; /* 박스가 위에 오도록 설정합니다 */
   border-radius: 20px;

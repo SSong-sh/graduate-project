@@ -5,22 +5,34 @@
     </div>
     <ul class="navbar-menu">
       <div class="navbar_list">
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">RESERCH</a></li>
-        <li><a href="#">STORY</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="#">TECH</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">SOLAR MAP</a></li>
+        <li><a href="#">SERVICE</a></li>
       </div>
     </ul>
     <div class="navbar-right">
-      <i class="fas fa-bars"></i>
+      <button class="new-button">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </nav>
+  <div class="modal-container">
+    <div class="modal-main">
+      <div class="modal-content">
+        <a href="#" class="navbar-logo">졸업작품</a>
+        <button class="new-button">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <script>
     window.addEventListener("scroll", function () {
       var navbar = document.querySelector(".navbar");
 
-      if (window.scrollY > 0) {
+      if (window.scrollY > 100) {
         navbar.classList.add("navbar-scroll");
       } else {
         navbar.classList.remove("navbar-scroll");

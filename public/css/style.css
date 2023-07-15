@@ -231,6 +231,30 @@ body {
   justify-content: space-evenly;
 } */
 
+.modal-body {
+  display: flex;
+  padding: 100px;
+  margin-left: 200px;
+}
+
+.modal-body-list li {
+  margin-bottom: 50px;
+}
+
+.modal-body-item {
+  margin: 20px;
+}
+.modal-body-item > a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 60px;
+}
+
+.modal-body-item li {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
 /* main */
 
 .main {

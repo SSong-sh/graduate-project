@@ -21,7 +21,7 @@
     <div class="modal-main">
       <div class="modal-content">
         <a href="#" class="navbar-logo">졸업작품</a>
-        <button class="new-button">
+        <button class="new-button close">
           <i class="fas fa-times"></i>
         </button>
       </div>
@@ -67,6 +67,12 @@
     </div>
   </div>
 
+  <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+
   <script>
     window.addEventListener("scroll", function () {
       var navbar = document.querySelector(".navbar");
@@ -77,13 +83,25 @@
         navbar.classList.remove("navbar-scroll");
       }
     });
-  </script>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"
-  ></script>
+    $(document).ready(function () {
+      $(".new-button").click(function () {
+        $(".modal-container").css("display", "block");
+      });
+    });
+
+    $(document).ready(function () {
+      $(".new-button").click(function () {
+        $(".modal-container").css("display", "block");
+      });
+    });
+
+    $(document).ready(function () {
+      $(".close").click(function () {
+        $(".modal-container").css("display", "none");
+      });
+    });
+  </script>
 
   <script
     src="https://kit.fontawesome.com/6478f529f2.js"
